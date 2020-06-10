@@ -13,13 +13,13 @@ import Text.Parsing.Combinators.Validation as V
 
 unquoted :: forall a m b. Monad m => ParserT a m b -> ParserT a m Char -> ParserT a m String
 unquoted delimiter = \p -> do
-  x <- R.until (V.fail delimiter *> p) delimiter
+  x <- R.until (V.not delimiter *> p) delimiter
   pure x
 
 quoted :: forall a m b c. Monad m => ParserT a m b -> ParserT a m c -> ParserT a m Char -> ParserT a m String
 quoted quote delimiter = \p -> do
   _ <- quote
-  x <- R.until (V.fail quote *> p) (quote *> delimiter)
+  x <- R.until (V.not quote *> p) (quote *> delimiter)
   _ <- quote
   pure x
 
