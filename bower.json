@@ -1,6 +1,6 @@
 {
   "name": "purescript-parsing-arguments",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "repository": {                                                           
     "type": "git",                                                          
@@ -17,8 +17,8 @@
     "purescript-console": "^4.4.0",
     "purescript-effect": "^2.0.1",
     "purescript-parsing": "^5.0.3",
-    "purescript-parsing-repetition": "markfarrell/purescript-parsing-repetition#^0.0.1",
-    "purescript-parsing-validation": "markfarrell/purescript-parsing-validation#^0.0.3"
+    "purescript-parsing-repetition": "markfarrell/purescript-parsing-repetition",
+    "purescript-parsing-validation": "markfarrell/purescript-parsing-validation"
   },
   "devDependencies": {
     "purescript-psci-support": "^4.0.0"
